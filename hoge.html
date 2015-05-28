@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    window.onload = function () {
+      var hoge = document.getElementById('hoge');
+      var fuga = document.getElementById('fuga');
+      hoge.addEventListener('dragover', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        fuga.setAttribute('style', 'display: block');
+      });
+
+      fuga.addEventListener('dragover', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+      });
+
+      fuga.addEventListener('dragleave', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        fuga.setAttribute('style', 'display: none');
+      });
+
+      fuga.addEventListener('drop', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        fuga.setAttribute('style', 'display: none');
+        alert('drop sitayo!');
+        return false;
+      });
+    };
+  </script>
+  <style>
+    #container {
+      position: relative;
+    }
+
+    #hoge, #fuga {
+      position: absolute;
+      top: 0;
+      width: 300px;
+      height: 100px;
+      padding: 0;
+      margin: 0;
+      border: 1px solid black;
+    }
+
+    #fuga {
+      display: none;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <textarea id="hoge"></textarea>
+    <div id="fuga"></div>
+  </div>
+</body>
+</html>

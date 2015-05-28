@@ -1,0 +1,584 @@
+/*
+Theme Name: BuddyPress (DENX SNS)
+Template: bp-default
+*/
+
+body {
+    font-family: 'Lucida Grande',
+    'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',
+    'Meiryo', 'メイリオ', sans-serif;
+    font-size: small;
+}
+
+/* 全体の角丸をなくす */
+div#container,
+div#content {
+    border-radius: 0;
+    border: none;
+}
+
+/* リンクの色を濃くする */
+a {
+    color: #2574A9;
+}
+
+/* フォーム部品の見た目を黒っぽく */
+input[type=button],
+input[type=submit],
+#header #search-bar input[type=submit],
+a.button,
+.comment-reply-link,
+.post-edit-link,
+input[type=button].loading,
+input[type=submit].loading,
+a.button:visited {
+    font-family: inherit;
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    padding: 0.4em 1.5em;
+    background: #333 no-repeat;
+    border: none;
+    border-radius: 0;
+}
+
+input[type=submit]:hover,
+input[type=submit].loading:hover,
+a.button:hover,
+.comment-reply-link:hover
+{
+    border: none;
+    color: white;
+    background: #555 no-repeat;
+}
+
+div.dir-search input[type=text],
+#header #search-bar input[type=text],
+input[type=text],
+input[type=email],
+textarea,
+form#whats-new-form textarea,
+select {
+    font-size: small;
+    border: 1px solid #aaa;
+    border-radius: 0;
+    font-family: 'Lucida Grande',
+    'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',
+    'Meiryo', 'メイリオ', sans-serif;
+}
+
+/* 見出しリンクを濃く */
+h2.pagetitle a, h2.posttitle a {
+    color: #222;
+}
+
+/* ヘッダのダサい青グラデーション背景を消し去る */
+#header {
+    background: transparent;
+}
+#header h1 a:first-child {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    color: #222 !important;
+}
+#header h1 a.button {
+    vertical-align: middle;
+    padding: 0.2em 0.8em;
+    font-size: small;
+}
+
+#nav {
+    float: none;
+}
+
+#nav > li > a {
+    text-transform: uppercase;
+    font-family: 'Open Sans', 'Lucida Grande',
+    'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',
+    'Meiryo', 'メイリオ', sans-serif;
+    display: block;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    min-width: 100px;
+    color: #222;
+    text-align: center;
+    text-decoration: none;
+    line-height: 2.5;
+    padding: 0 1em;
+    background: transparent; /* 上書き */
+    border-radius: 0; /* 上書き */
+}
+
+#nav > li > a:hover {
+    background: #555;
+    color: white;
+}
+
+#nav li.selected a, #nav > li.current-menu-item a, #nav > li.current_page_item a, #nav > li.current_page_ancestor a {
+    background: #555;
+    color: white;
+}
+
+div.author-box {
+    font-style: normal; /* 投稿者名表示の 斜体をなくす */
+}
+
+.activity-list li.mini .activity-avatar img.avatar,
+div#sidebar ul.item-list img.avatar {
+    width: auto;
+    height: auto;
+    margin-left: 0;
+}
+
+ul.item-list li {
+    min-height: 50px;
+    padding: 0.6em 0;
+}
+
+ul.item-list li div.item-desc {
+    color: #222;
+    font-size: small;
+}
+
+.activity-list .activity-content .activity-header {
+    font-size: small;
+}
+
+p.date span:first-child {
+    font-style: normal;
+}
+
+/* タイムライン投稿テキストフォームの角丸をなくす */
+form#whats-new-form textarea {
+    border-radius: 0;
+}
+
+div.item-list-tabs#subnav {
+    padding-bottom: 8px;
+}
+
+/* pagination */
+div.pagination {
+    font-size: small;
+    min-height: 1.5em;
+    margin: 0;
+}
+
+.pagination li {
+    font-size: small;
+    min-width: 3em;
+    text-align: center;
+    display: inline-block;
+}
+
+.pagination li span,
+.pagination li a {
+    display: block;
+    padding: 0.2em 0.6em;
+}
+
+.pagination li span {
+    background: #555;
+    color: white;
+}
+
+.pagination li a {
+    border: 1px solid #555;
+}
+
+/* アクティビティの下の　お気に入りやいいね！ボタン */
+div.activity-meta a.button,
+a.bp-primary-action,
+a.bp-secondary-action,
+.comment-reply-link
+{
+    font-family: inherit;
+    border: 1px solid #eee;
+    background: white;
+    color: #222;
+    padding: 0.2em 0.4em;
+}
+div.activity-meta a.button:hover,
+a.bp-primary-action:hover,
+a.bp-secondary-action:hover,
+.comment-reply-link:hover {
+    color: #222;
+    background: #eee;
+}
+a.bp-primary-action,
+a.bp-secondary-action {
+    font-size: x-small;
+}
+div.activity-meta a.button:hover {
+    background: #eee;
+}
+a.bp-primary-action span, #reply-title small a span {
+    background: #777;
+    border-radius: 0;
+}
+div.activity-meta a,
+div.activity-meta a.button.loading
+{
+    font-size: x-small;
+}
+
+div.activity-meta a.button.loading {
+    padding-right: 1.5em;
+}
+
+ul.item-list li div.item-title, ul.item-list li h4 {
+    width: 100%;
+}
+
+/* タブの角丸をなくす */
+div.item-list-tabs ul li.selected a,
+div.item-list-tabs ul li.current a {
+    border-radius: 0;
+}
+
+/* いいね！しました */
+.users-who-like {
+    font-size: x-small;
+    padding: 0.4em 0;
+}
+
+/* アクティビティのコメント欄のアイコンを大きくする */
+div.activity-comments div.acomment-avatar img {
+    width: 32px;
+    height: auto;
+}
+
+div.activity-comments div.acomment-content,
+.acomment-options {
+    margin-left: 50px;
+}
+
+#sidebar .item-meta {
+    overflow: hidden;
+}
+
+/* メンバー一覧で右にはみ出る対策 */
+#admins-list li, #mods-list li, #members-list li {
+    overflow: inherit;
+}
+
+/* 修正するときのテキストボックスが小さくて縦長で笑った */
+textarea[name=activity_content] {
+    width: 100%;
+    height: 5em;
+}
+
+/* アクティビティの種別タブ消す */
+.activity-type-tabs {
+    display: none;
+}
+
+#activity-stream {
+    margin-top: 1em;
+}
+
+#whats-new-form {
+    background: #eee;
+    padding: 1em;
+}
+
+form#whats-new-form textarea {
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 80%;
+}
+
+/* サイトの上の方をコンパクトにする */
+#nav {
+    margin: 0;
+}
+#header {
+    margin: 0;
+    padding: 0;
+}
+div.item-list-tabs ul li {
+    margin: 0.4em 0 0 0;
+}
+div.item-list-tabs ul li:first-child {
+    margin-left: 0;
+}
+#nav li {
+    margin-left: 0;
+}
+
+#buddypress-edit-activity-wrapper{
+    display: inline-block;
+    width: 100%;
+}
+
+#whats-new-avatar img.avatar {
+    border-color: white;
+}
+
+#header #search-bar .padder {
+    padding: 1em 0;
+}
+
+/* lightbox になぜか閉じるボタンがいっぱいあるので全部消す */
+.screen-reader-text,
+.tb-close-icon {
+    display: none;
+}
+
+/* アクティビティのコンテンツ内のYoutube埋め込みなどがでかくて邪魔なので最大高さ200pxに収める */
+div.activity-content iframe {
+    max-height: 200px;
+    width: auto;
+}
+
+/* アクティブ：n分前　とかいう気持ち悪い機能を見えなくする */
+span.activity {
+    display: none;
+}
+
+div.author-box {
+    padding: 0;
+    margin: 0;
+}
+
+p.posttitle {
+    margin: 0;
+}
+
+div.post-content {
+    float: left;
+    margin: 0 0 0 1em;
+}
+
+div.post {
+    margin: 0;
+    padding: 1em 0;
+    border-bottom: 1px solid #eee;
+}
+
+div.author-box {
+    width: auto;
+    max-width: 100px;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
+
+div.author-box img {
+    border: 2px solid #eee;
+}
+
+p.date {
+    border: none;
+    font-family: inherit;
+    font-size: x-small;
+    margin: 0;
+    padding: 0;
+}
+
+.like-box {
+    display: none;
+}
+
+/* 記事の最後にある謎の空白領域を削除 */
+p.postmetadata {
+    display: none;
+}
+
+div.comment-meta {
+    margin: 15px 0 0 0;
+}
+
+.comment-author {
+    font-size: larger;
+    margin-right: 0.4em;
+}
+
+#reply-title {
+    display: none;
+}
+
+#nav-above,
+#nav-below {
+    margin: 1em 0;
+}
+
+div.activity-meta a {
+    font-family: inherit;
+    padding: 0;
+}
+a.button,
+div.activity-meta a.button {
+    padding: 0.2em 0.4em;
+}
+
+.navigation, .paged-navigation, .comment-navigation {
+    font-family: inherit;
+    font-style: normal;
+}
+
+
+#respond {
+    background-color: #eee;
+    border-radius: 0;
+    border: none;
+}
+
+ul.button-nav li a, 
+div.generic-button a,
+.comment-reply-link {
+    color: #222;
+    background: white;
+    border-radius: 0;
+}
+
+ul.button-nav li a:hover, 
+div.generic-button a:hover,
+.comment-reply-link:hover {
+    background: #eee;
+    border-radius: 0;
+}
+
+/* タイムライン投稿のテキストエリアの調整 */
+form#whats-new-form textarea#whats-new,
+form#frm_buddypress-edit-activity textarea[name=activity_content] {
+    height: 25px; /* line-height + border分*/
+    line-height: 23px;
+    resize: none;
+    padding: 0 0.5em;
+}
+
+/* タイムライン　アイコンの横が空きすぎなので少し詰める */
+.activity-list .activity-content,
+div.activity-comments {
+    margin-left: 50px;
+}
+
+.activity-list .activity-content .activity-inner, .activity-list .activity-content blockquote {
+    margin: 0;
+}
+
+div.activity-comments div.acomment-content,
+.acomment-options {
+    margin-left: 40px;
+}
+
+.activity-avatar img.avatar {
+    width: 40px;
+    height: auto;
+}
+
+/* */
+div.activity-meta {
+    margin: 0 0 0.6em 0;
+}
+
+.activity-list .activity-content {
+    margin-bottom: 0;
+}
+
+#aw-whats-new-submit {
+    vertical-align: bottom;
+}
+
+.activity-list li.mini .activity-avatar img.avatar {
+    width: 40px;
+    height: auto;
+}
+
+.post-edit-link {
+    font-size: x-small;
+    padding: 0.2em 0.4em;
+}
+
+ul.item-list li div.item-desc {
+    margin-top: 0;
+}
+
+.post-excerpt {
+    margin-left: 1em;
+    color: #555;
+    font-size: x-small;
+}
+
+#login-form {
+    width: 300px;
+    margin-bottom: 1em;
+}
+
+div#login-padder.padder {
+    margin-right: 0;
+    border-right: none;
+}
+
+/* 最上部のWordpressの管理バーのWordpressロゴを消す */
+#wp-admin-bar-wp-logo {
+    display: none;
+}
+
+/* RSSアイコン消す */
+.feed {
+    display: none;
+}
+
+/* アクティビティの表示種別変更のドロップダウンリストを消す */
+#activity-filter-select {
+    display: none;
+}
+
+/* タイムラインのコメント投稿フォームの角丸を消す */
+div.activity-comments form.ac-form,
+div.activity-comments form .ac-textarea
+{
+    border-radius: 0;
+}
+
+/* 数値ツールチップ的なやつの角丸を消す */
+div.item-list-tabs ul li a span {
+    border-radius: 0;
+}
+
+/* グループ一覧のグループ説明の幅が50％しかないのをやめて右まで広くする */
+ul.item-list li div.item-desc {
+    width: auto;
+}
+
+/* タイムラインのタイトルを少しコンパクトに */
+.activity-list .activity-content .activity-header {
+    line-height: 2.2; 
+}
+.activity-list li .activity-inreplyto {
+    margin-top: 0;
+}
+
+/* 流れる文字は赤くてでかい（迫真）*/
+marquee {
+    text-decoration: blink;
+    font-size: x-large;
+    font-weight: bold;
+    color: red;
+    line-height: 1.5em;
+}
+
+/* タイムライン投稿の投稿先（全体化グループか）がなぜかheight: 0 になっていたのでなおす */
+#whats-new-options {
+    height: auto;
+}
+
+/* タイムライン投稿の公開制限は1種類しかないのでそもそも選べないようにする */
+#whats-new-submit {
+    display: none;
+}
+
+/* TL内の画像は小さくする でかいとTLの邪魔 */
+.activity-inner img {
+    max-width: 100%;
+    max-height: 160px;
+    height: auto;
+}
+
+/* スマホ用 */
+@media (max-width: 320px) {
+    ul#activity-stream.item-list li div.activity-avatar {
+        display: block !important;
+    }
+}
