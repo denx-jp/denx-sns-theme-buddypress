@@ -345,14 +345,34 @@ p.posttitle {
 }
 
 div.post-content {
-    float: left;
-    margin: 0 0 0 1em;
+    margin: 0 0 0 4em;
+}
+
+#blog-single .post-content {
+    margin-left: 5em;
 }
 
 div.post {
     margin: 0;
     padding: 1em 0;
     border-bottom: 1px solid #eee;
+}
+
+/* スマホの記事全体の左側が空いているのを修正 */
+.entry {
+    margin-top: 3em; /* 投稿日時と記事内容の間が狭いのですこしあける */
+    margin-left: -5em; /* 左側に無理やりずらす */
+    width: 135%; /* 左にずれた分幅を増やす */
+}
+
+/* 記事内の動画などの埋め込みの幅がでかくてはみ出してしまうのを修正 */
+.entry iframe {
+    max-width: 98%;
+}
+
+/* 画像の下や段落ごとの上下の隙間がなく狭かったのですこしあける */
+.entry div {
+    margin: 0.4em 0;
 }
 
 div.author-box {
