@@ -48,3 +48,9 @@
         max-width: 100%;
     }
 }
+
+@media only screen and (max-width: 320px) {
+    div.post .entry {
+        width: 130%;
+    }
+}
