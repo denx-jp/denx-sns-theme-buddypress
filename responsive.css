@@ -3,6 +3,11 @@
         margin-top: 0 !important;
     }
 
+    /* スマホで見出しが二行以上になると上下が詰まって見えるのを修正 */
+    h1, h2, h3, h4 {
+        line-height: 1.3;
+    }
+
     #search-form {
         display: none;
     }
@@ -26,15 +31,32 @@
 
     div.post-content {
         max-width: 70%;
-        padding-left: 1em;
     }
 
     .padder {
         padding: 1em;
     }
 
+    /* スマホの記事全体の左側が空いているのを修正 */
+    .entry {
+        margin-top: 1em; /* 投稿日時と記事内容の間が狭いのですこしあける */
+        margin-left: -25%; /* 左側に無理やりずらす */
+        width: 135%; /* 左にずれた分幅を増やす */
+    }
+
+    /* 記事内の縦長の画像が巨大になるのを修正 */
     .entry img {
         width: auto;
         max-width: 100%;
+    }
+
+    /* 記事内の動画などの埋め込みの幅がでかくてはみ出してしまうのを修正 */
+    .entry iframe {
+        max-width: 98%;
+    }
+
+    /* 画像の下や段落ごとの上下の隙間がなく狭かったのですこしあける */
+    .entry div {
+        margin: 0.4em 0;
     }
 }
