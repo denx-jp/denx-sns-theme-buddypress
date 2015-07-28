@@ -47,6 +47,7 @@ add_action('init', 'bac_allowed_html_tags_in_comments', 10);
 // プロフィール欄の各項目が自動的にリンクになるのを無効化
 remove_filter( 'bp_get_the_profile_field_value', 'xprofile_filter_link_profile_data', 9, 2);
 
+/*
 // タイムラインの投稿をもっと短くする
 function shorter_activity_entry($text) {
     if (bp_get_activity_type() == 'new_blog_post') {
@@ -60,6 +61,7 @@ function shorter_activity_entry($text) {
     return $text;
 }
 add_filter('bp_get_activity_content_body', 'shorter_activity_entry', 20);
+ */
 
 // ブログ記事へのコメントをタイムラインに通知する
 function bpfr_stream( $qs, $object ) {
@@ -89,4 +91,3 @@ function whitelist_tags_in_activity($allowedtags) {
     return $allowedtags;
 }
 add_filter('bp_activity_allowed_tags', 'whitelist_tags_in_activity');
-
