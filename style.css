@@ -345,11 +345,7 @@ p.posttitle {
 }
 
 div.post-content {
-    margin: 0 0 0 4em;
-}
-
-#blog-single .post-content {
-    margin-left: 5em;
+    margin: 0 0 0 0;
 }
 
 div.post {
@@ -358,11 +354,8 @@ div.post {
     border-bottom: 1px solid #eee;
 }
 
-/* スマホの記事全体の左側が空いているのを修正 */
 .entry {
     margin-top: 3em; /* 投稿日時と記事内容の間が狭いのですこしあける */
-    margin-left: -5em; /* 左側に無理やりずらす */
-    width: 135%; /* 左にずれた分幅を増やす */
 }
 
 /* 記事内の動画などの埋め込みの幅がでかくてはみ出してしまうのを修正 */
